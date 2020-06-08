@@ -6,7 +6,7 @@ library ieee;
 
 entity sevensegment_driver is
   port(
-    i_value     : in  integer;
+    i_value     : in  std_logic_vector(3 downto 0);
 
     o_Segment_A : out std_logic;
     o_Segment_B : out std_logic;
@@ -19,48 +19,66 @@ entity sevensegment_driver is
 end sevensegment_driver;
 
 architecture rtl of sevensegment_driver is
+  signal value_i : integer range 0 to 15;
 begin
 
-  o_Segment_A <= '1' when i_value = 0  or i_value = 2  or i_value = 3  else
-                 '1' when i_value = 5  or i_value = 6  or i_value = 7  else
-                 '1' when i_value = 8  or i_value = 9  or i_value = 10 else
-                 '1' when i_value = 12 or i_value = 14 or i_value = 15 else
-                 '0';
+  value_i <= 0  when i_value = "0000" else
+             1  when i_value = "0001" else
+             2  when i_value = "0010" else
+             3  when i_value = "0011" else
+             4  when i_value = "0100" else
+             5  when i_value = "0101" else
+             6  when i_value = "0110" else
+             7  when i_value = "0111" else
+             8  when i_value = "1000" else
+             9  when i_value = "1001" else
+             10 when i_value = "1010" else
+             11 when i_value = "1011" else
+             12 when i_value = "1100" else
+             13 when i_value = "1101" else
+             14 when i_value = "1110" else
+             15;
 
-  o_Segment_B <= '1' when i_value = 0  or i_value = 1  or i_value = 2  else
-                 '1' when i_value = 3  or i_value = 4  or i_value = 7  else
-                 '1' when i_value = 8  or i_value = 9  or i_value = 10 else
-                 '1' when i_value = 13                                 else
-                 '0';
+  o_Segment_A <= '0' when value_i = 0  or value_i = 2  or value_i = 3  else
+                 '0' when value_i = 5  or value_i = 6  or value_i = 7  else
+                 '0' when value_i = 8  or value_i = 9  or value_i = 10 else
+                 '0' when value_i = 12 or value_i = 14 or value_i = 15 else
+                 '1';
 
-  o_Segment_C <= '1' when i_value = 0  or i_value = 1  or i_value = 3  else
-                 '1' when i_value = 4  or i_value = 5  or i_value = 6  else
-                 '1' when i_value = 7  or i_value = 8  or i_value = 9  else
-                 '1' when i_value = 10 or i_value = 11 or i_value = 13 else
-                 '0';
+  o_Segment_B <= '0' when value_i = 0  or value_i = 1  or value_i = 2  else
+                 '0' when value_i = 3  or value_i = 4  or value_i = 7  else
+                 '0' when value_i = 8  or value_i = 9  or value_i = 10 else
+                 '0' when value_i = 13                                 else
+                 '1';
 
-  o_Segment_D <= '1' when i_value = 0  or i_value = 2  or i_value = 3  else
-                 '1' when i_value = 5  or i_value = 6  or i_value = 8  else
-                 '1' when i_value = 9  or i_value = 11 or i_value = 12 else
-                 '1' when i_value = 13 or i_value = 14 or i_value = 15 else
-                 '0';
+  o_Segment_C <= '0' when value_i = 0  or value_i = 1  or value_i = 3  else
+                 '0' when value_i = 4  or value_i = 5  or value_i = 6  else
+                 '0' when value_i = 7  or value_i = 8  or value_i = 9  else
+                 '0' when value_i = 10 or value_i = 11 or value_i = 13 else
+                 '1';
 
-  o_Segment_E <= '1' when i_value = 0  or i_value = 2  or i_value = 6  else
-                 '1' when i_value = 8  or i_value = 10 or i_value = 11 else
-                 '1' when i_value = 12 or i_value = 13 or i_value = 14 else
-                 '1' when i_value = 15                                 else
-                 '0';
+  o_Segment_D <= '0' when value_i = 0  or value_i = 2  or value_i = 3  else
+                 '0' when value_i = 5  or value_i = 6  or value_i = 8  else
+                 '0' when value_i = 9  or value_i = 11 or value_i = 12 else
+                 '0' when value_i = 13 or value_i = 14 or value_i = 15 else
+                 '1';
 
-  o_Segment_F <= '1' when i_value = 0  or i_value = 4  or i_value = 5  else
-                 '1' when i_value = 6  or i_value = 8  or i_value = 9  else
-                 '1' when i_value = 10 or i_value = 11 or i_value = 12 else
-                 '1' when i_value = 14 or i_value = 15                 else
-                 '0';
+  o_Segment_E <= '0' when value_i = 0  or value_i = 2  or value_i = 6  else
+                 '0' when value_i = 8  or value_i = 10 or value_i = 11 else
+                 '0' when value_i = 12 or value_i = 13 or value_i = 14 else
+                 '0' when value_i = 15                                 else
+                 '1';
 
-  o_Segment_G <= '1' when i_value = 2  or i_value = 3  or i_value = 4  else
-                 '1' when i_value = 5  or i_value = 6  or i_value = 8  else
-                 '1' when i_value = 9  or i_value = 10 or i_value = 11 else
-                 '1' when i_value = 13 or i_value = 14 or i_value = 15 else
-                 '0';
+  o_Segment_F <= '0' when value_i = 0  or value_i = 4  or value_i = 5  else
+                 '0' when value_i = 6  or value_i = 8  or value_i = 9  else
+                 '0' when value_i = 10 or value_i = 11 or value_i = 12 else
+                 '0' when value_i = 14 or value_i = 15                 else
+                 '1';
+
+  o_Segment_G <= '0' when value_i = 2  or value_i = 3  or value_i = 4  else
+                 '0' when value_i = 5  or value_i = 6  or value_i = 8  else
+                 '0' when value_i = 9  or value_i = 10 or value_i = 11 else
+                 '0' when value_i = 13 or value_i = 14 or value_i = 15 else
+                 '1';
 
 end;
