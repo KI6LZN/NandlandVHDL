@@ -25,11 +25,11 @@ begin
       max_10Hz => 1250000
     )
     port map(
-      i_Clk   => i_Clk,
-      o_LED_1 => o_LED_1,
-      o_LED_2 => o_LED_2,
-      o_LED_3 => o_LED_3,
-      o_LED_4 => o_LED_4
+      i_Clk  => i_Clk,
+      o_led1 => o_LED_1,
+      o_led2 => o_LED_2,
+      o_led3 => o_LED_3,
+      o_led4 => o_LED_4
     );
 
 end rtl;

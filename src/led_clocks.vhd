@@ -14,10 +14,10 @@ entity led_clocks is
   port(
     i_Clk   : in  std_logic;
 
-    o_LED_1 : out std_logic;
-    o_LED_2 : out std_logic;
-    o_LED_3 : out std_logic;
-    o_LED_4 : out std_logic
+    o_led1 : out std_logic;
+    o_led2 : out std_logic;
+    o_led3 : out std_logic;
+    o_led4 : out std_logic
   );
 end led_clocks;
 
@@ -33,13 +33,13 @@ architecture rtl of led_clocks is
   signal LED_4_i : std_logic := '0';
 begin
 
-  o_LED_1 <= LED_1_i;
-  o_LED_2 <= LED_2_i;
-  o_LED_3 <= LED_3_i;
-  o_LED_4 <= LED_4_i;
+  o_led1 <= LED_1_i;
+  o_led2 <= LED_2_i;
+  o_led3 <= LED_3_i;
+  o_led4 <= LED_4_i;
 
-  process(i_clk) begin
-    if rising_edge(i_clk) then
+  process(i_Clk) begin
+    if rising_edge(i_Clk) then
       if (counter_1_i = max_1Hz) then
         counter_1_i <= 0;
         LED_1_i <= not LED_1_i;

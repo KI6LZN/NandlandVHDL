@@ -20,10 +20,10 @@ begin
     )
     port map(
       i_Clk   => i_clk,
-      o_LED_1 => open,
-      o_LED_2 => open,
-      o_LED_3 => open,
-      o_LED_4 => open
+      o_led1 => open,
+      o_led2 => open,
+      o_led3 => open,
+      o_led4 => open
     );
 
   i_clk <= not i_clk after clk_period/2;
