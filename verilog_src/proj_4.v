@@ -10,30 +10,20 @@ module proj_4 (
     // signals
     reg LED_1_i  = 1'b0;
     reg switch_i = 1'b0;
-    reg count_flag_i = 1'b0;
 
-    reg [17:0] counter_i = 0;
+    wire switch_w;
+
+    debounce_module Debouncing
+    (.i_clk(i_Clk)        ,
+     .i_switch(i_Switch_1),
+     .o_switch(switch_w)  );
+
 
     always @ (posedge i_Clk)
       begin
-        if (switch_i == 1'b1 && i_Switch_1 == 1'b0)
+        switch_i <= switch_w;
+        if (switch_i == 1'b1 && switch_w == 1'b0)
           LED_1_i <= ~LED_1_i;
-      end
-
-    always @ (posedge i_Clk)
-      begin
-        if (switch_i ~= 1'b1 && i_Switch_1 == 1'b0)
-          count_flag_i <= 1'b1;
-        if (count_flag_i == 1'b1)
-          begin
-            counter_i <= counter_i + 1;
-          end
-          if (counter_i == 250000)
-            begin
-              count_flag_i <= 1'b0;
-              switch_i <= i_Switch_1;
-              counter_i <= 0;
-            end
       end
 
     assign o_LED_1 = LED_1_i;
