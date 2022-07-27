@@ -10,8 +10,8 @@ module proj_2 (
     output o_LED_1   ,
     output o_LED_4 );
 
-    assign o_LED_1 = i_Switch_1 AND i_Switch_2;
-    assign o_LED_4 = i_Switch_3 AND i_Switch_4;
+    assign o_LED_1 = i_Switch_1 & i_Switch_2;
+    assign o_LED_4 = i_Switch_3 & i_Switch_4;
 
 
 endmodule
