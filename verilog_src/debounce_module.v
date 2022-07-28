@@ -15,9 +15,8 @@ module debounce_module (
     always @ (posedge i_clk)
     begin
       if (switch_i !== i_switch && counter_i < COUNTER_LIMIT)
-        begin
         counter_i <= counter_i + 1;
-        end
+
       else if (counter_i == COUNTER_LIMIT)
         begin
           counter_i    <= 0;
