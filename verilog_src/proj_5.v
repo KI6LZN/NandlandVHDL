@@ -41,7 +41,7 @@ module proj_5 (
     always @ (posedge i_Clk)
       begin
         switch_i <= switch_w;
-        if (switch_w == 1'b1 && counter_i < COUNTER_LIMIT)
+        if (switch_i == 1'b0 && switch_w == 1'b1 && counter_i < COUNTER_LIMIT)
           counter_i <= counter_i + 1;
         else if (switch_w == 1'b1 && counter_i == COUNTER_LIMIT)
           counter_i <= 0;
