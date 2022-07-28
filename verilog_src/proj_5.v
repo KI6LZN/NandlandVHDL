@@ -32,12 +32,12 @@ module proj_5 (
     wire switch_l_w;
     wire switch_r_w;
 
-    debounce_module Debouncing
+    debounce_module Debouncing_l
     (.i_clk(i_Clk)        ,
      .i_switch(i_Switch_1),
      .o_switch(switch_l_w)  );
 
-    debounce_module Debouncing
+    debounce_module Debouncing_r
     (.i_clk(i_Clk)        ,
      .i_switch(i_Switch_2),
      .o_switch(switch_r_w)  );
