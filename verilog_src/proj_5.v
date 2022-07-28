@@ -13,7 +13,7 @@ module proj_5 (
     output o_Segment2_F,
     output o_Segment2_G  );
 
-    parameter COUNTER_LIMIT = 15;
+    parameter COUNTER_LIMIT = 16;
 
     // signals
     reg switch_i = 1'b0;
@@ -26,7 +26,7 @@ module proj_5 (
      .i_switch(i_Switch_1),
      .o_switch(switch_w)  );
 
-     seven_segment Left
+     seven_segment Right
      (.i_clk(i_Clk),
       .i_value(counter_i),
       .o_seg_A(o_Segment2_A),
@@ -43,7 +43,7 @@ module proj_5 (
         switch_i <= switch_w;
         if (switch_i == 1'b0 && switch_w == 1'b1 && counter_i < COUNTER_LIMIT)
           counter_i <= counter_i + 1;
-        else if (switch_w == 1'b1 && counter_i == COUNTER_LIMIT)
+        else if (switch_i == 1'b0 && switch_w == 1'b1 && counter_i == COUNTER_LIMIT)
           counter_i <= 0;
       end
 
