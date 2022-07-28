@@ -5,7 +5,7 @@
 module proj_5 (
     input  i_Clk       ,
     input  i_Switch_1  ,
-    input  i_Switch_2  ,
+    input  i_Switch_3  ,
     output o_Segment1_A,
     output o_Segment1_B,
     output o_Segment1_C,
@@ -39,7 +39,7 @@ module proj_5 (
 
     debounce_module Debouncing_r
     (.i_clk(i_Clk)        ,
-     .i_switch(i_Switch_2),
+     .i_switch(i_Switch_3),
      .o_switch(switch_r_w)  );
 
     seven_segment Left
