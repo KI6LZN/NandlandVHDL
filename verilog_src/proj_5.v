@@ -111,7 +111,7 @@ module proj_5 (
                 r_counter_i <= LED_LIMIT;
               end
           end
-
+    end //end of always block
 
 
 endmodule
