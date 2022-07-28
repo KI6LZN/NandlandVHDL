@@ -17,163 +17,163 @@ module seven_segment(
       case(i_value)
         4'b0000 :
           begin
-            o_seg_A <= 1b'1;
-            o_seg_B <= 1b'1;
-            o_seg_C <= 1b'1;
-            o_seg_D <= 1b'1;
-            o_seg_E <= 1b'1;
-            o_seg_F <= 1b'1;
-            o_seg_G <= 1b'0;
+            o_seg_A <= 1;
+            o_seg_B <= 1;
+            o_seg_C <= 1;
+            o_seg_D <= 1;
+            o_seg_E <= 1;
+            o_seg_F <= 1;
+            o_seg_G <= 0;
           end
         4'b0001 :
           begin
-            o_seg_A <= 1b'0;
-            o_seg_B <= 1b'1;
-            o_seg_C <= 1b'1;
-            o_seg_D <= 1b'0;
-            o_seg_E <= 1b'0;
-            o_seg_F <= 1b'0;
-            o_seg_G <= 1b'0;
+            o_seg_A <= 0;
+            o_seg_B <= 1;
+            o_seg_C <= 1;
+            o_seg_D <= 0;
+            o_seg_E <= 0;
+            o_seg_F <= 0;
+            o_seg_G <= 0;
           end
         4'b0010 :
           begin
-            o_seg_A <= 1b'1;
-            o_seg_B <= 1b'1;
-            o_seg_C <= 1b'0;
-            o_seg_D <= 1b'1;
-            o_seg_E <= 1b'1;
-            o_seg_F <= 1b'0;
-            o_seg_G <= 1b'1;
+            o_seg_A <= 1;
+            o_seg_B <= 1;
+            o_seg_C <= 0;
+            o_seg_D <= 1;
+            o_seg_E <= 1;
+            o_seg_F <= 0;
+            o_seg_G <= 1;
           end
         4'b0011 :
           begin
-            o_seg_A <= 1b'1;
-            o_seg_B <= 1b'1;
-            o_seg_C <= 1b'1;
-            o_seg_D <= 1b'1;
-            o_seg_E <= 1b'0;
-            o_seg_F <= 1b'0;
-            o_seg_G <= 1b'1;
+            o_seg_A <= 1;
+            o_seg_B <= 1;
+            o_seg_C <= 1;
+            o_seg_D <= 1;
+            o_seg_E <= 0;
+            o_seg_F <= 0;
+            o_seg_G <= 1;
           end
         4'b0100 :
           begin
-            o_seg_A <= 1b'0;
-            o_seg_B <= 1b'1;
-            o_seg_C <= 1b'1;
-            o_seg_D <= 1b'0;
-            o_seg_E <= 1b'0;
-            o_seg_F <= 1b'1;
-            o_seg_G <= 1b'1;
+            o_seg_A <= 0;
+            o_seg_B <= 1;
+            o_seg_C <= 1;
+            o_seg_D <= 0;
+            o_seg_E <= 0;
+            o_seg_F <= 1;
+            o_seg_G <= 1;
           end
         4'b0101 :
           begin
-            o_seg_A <= 1b'1;
-            o_seg_B <= 1b'0;
-            o_seg_C <= 1b'1;
-            o_seg_D <= 1b'1;
-            o_seg_E <= 1b'0;
-            o_seg_F <= 1b'1;
-            o_seg_G <= 1b'1;
+            o_seg_A <= 1;
+            o_seg_B <= 0;
+            o_seg_C <= 1;
+            o_seg_D <= 1;
+            o_seg_E <= 0;
+            o_seg_F <= 1;
+            o_seg_G <= 1;
           end
         4'b0110 :
           begin
-            o_seg_A <= 1b'1;
-            o_seg_B <= 1b'0;
-            o_seg_C <= 1b'1;
-            o_seg_D <= 1b'1;
-            o_seg_E <= 1b'1;
-            o_seg_F <= 1b'1;
-            o_seg_G <= 1b'1;
+            o_seg_A <= 1;
+            o_seg_B <= 0;
+            o_seg_C <= 1;
+            o_seg_D <= 1;
+            o_seg_E <= 1;
+            o_seg_F <= 1;
+            o_seg_G <= 1;
           end
         4'b0111 :
           begin
-            o_seg_A <= 1b'1;
-            o_seg_B <= 1b'1;
-            o_seg_C <= 1b'1;
-            o_seg_D <= 1b'0;
-            o_seg_E <= 1b'0;
-            o_seg_F <= 1b'0;
-            o_seg_G <= 1b'0;
+            o_seg_A <= 1;
+            o_seg_B <= 1;
+            o_seg_C <= 1;
+            o_seg_D <= 0;
+            o_seg_E <= 0;
+            o_seg_F <= 0;
+            o_seg_G <= 0;
           end
         4'b1000 :
           begin
-            o_seg_A <= 1b'1;
-            o_seg_B <= 1b'1;
-            o_seg_C <= 1b'1;
-            o_seg_D <= 1b'1;
-            o_seg_E <= 1b'1;
-            o_seg_F <= 1b'1;
-            o_seg_G <= 1b'1;
+            o_seg_A <= 1;
+            o_seg_B <= 1;
+            o_seg_C <= 1;
+            o_seg_D <= 1;
+            o_seg_E <= 1;
+            o_seg_F <= 1;
+            o_seg_G <= 1;
           end
         4'b1001 :
           begin
-            o_seg_A <= 1b'1;
-            o_seg_B <= 1b'1;
-            o_seg_C <= 1b'1;
-            o_seg_D <= 1b'0;
-            o_seg_E <= 1b'0;
-            o_seg_F <= 1b'1;
-            o_seg_G <= 1b'1;
+            o_seg_A <= 1;
+            o_seg_B <= 1;
+            o_seg_C <= 1;
+            o_seg_D <= 0;
+            o_seg_E <= 0;
+            o_seg_F <= 1;
+            o_seg_G <= 1;
           end
         4'b1010 :
           begin
-            o_seg_A <= 1b'1;
-            o_seg_B <= 1b'1;
-            o_seg_C <= 1b'1;
-            o_seg_D <= 1b'0;
-            o_seg_E <= 1b'1;
-            o_seg_F <= 1b'1;
-            o_seg_G <= 1b'1;
+            o_seg_A <= 1;
+            o_seg_B <= 1;
+            o_seg_C <= 1;
+            o_seg_D <= 0;
+            o_seg_E <= 1;
+            o_seg_F <= 1;
+            o_seg_G <= 1;
           end
         4'b1011 :
           begin
-            o_seg_A <= 1b'0;
-            o_seg_B <= 1b'0;
-            o_seg_C <= 1b'1;
-            o_seg_D <= 1b'1;
-            o_seg_E <= 1b'1;
-            o_seg_F <= 1b'1;
-            o_seg_G <= 1b'1;
+            o_seg_A <= 0;
+            o_seg_B <= 0;
+            o_seg_C <= 1;
+            o_seg_D <= 1;
+            o_seg_E <= 1;
+            o_seg_F <= 1;
+            o_seg_G <= 1;
           end
         4'b1100 :
           begin
-            o_seg_A <= 1b'1;
-            o_seg_B <= 1b'0;
-            o_seg_C <= 1b'0;
-            o_seg_D <= 1b'1;
-            o_seg_E <= 1b'1;
-            o_seg_F <= 1b'1;
-            o_seg_G <= 1b'0;
+            o_seg_A <= 1;
+            o_seg_B <= 0;
+            o_seg_C <= 0;
+            o_seg_D <= 1;
+            o_seg_E <= 1;
+            o_seg_F <= 1;
+            o_seg_G <= 0;
           end
         4'b1101 :
           begin
-            o_seg_A <= 1b'0;
-            o_seg_B <= 1b'1;
-            o_seg_C <= 1b'1;
-            o_seg_D <= 1b'1;
-            o_seg_E <= 1b'1;
-            o_seg_F <= 1b'0;
-            o_seg_G <= 1b'1;
+            o_seg_A <= 0;
+            o_seg_B <= 1;
+            o_seg_C <= 1;
+            o_seg_D <= 1;
+            o_seg_E <= 1;
+            o_seg_F <= 0;
+            o_seg_G <= 1;
           end
         4'b1110 :
           begin
-            o_seg_A <= 1b'1;
-            o_seg_B <= 1b'0;
-            o_seg_C <= 1b'0;
-            o_seg_D <= 1b'1;
-            o_seg_E <= 1b'1;
-            o_seg_F <= 1b'1;
-            o_seg_G <= 1b'1;
+            o_seg_A <= 1;
+            o_seg_B <= 0;
+            o_seg_C <= 0;
+            o_seg_D <= 1;
+            o_seg_E <= 1;
+            o_seg_F <= 1;
+            o_seg_G <= 1;
           end
         4'b1111 :
           begin
-            o_seg_A <= 1b'1;
-            o_seg_B <= 1b'0;
-            o_seg_C <= 1b'0;
-            o_seg_D <= 1b'0;
-            o_seg_E <= 1b'1;
-            o_seg_F <= 1b'1;
-            o_seg_G <= 1b'1;
+            o_seg_A <= 1;
+            o_seg_B <= 0;
+            o_seg_C <= 0;
+            o_seg_D <= 0;
+            o_seg_E <= 1;
+            o_seg_F <= 1;
+            o_seg_G <= 1;
           end
 
       endcase
