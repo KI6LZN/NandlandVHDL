@@ -28,8 +28,8 @@ module proj_6 (
     begin
       counter_1_i <= counter_1_i + 1;
       counter_2_i <= counter_2_i + 1;
-      counter_3_i <= counter_3_i + 1;
-      counter_4_i <= counter_4_i + 1;
+      counter_5_i <= counter_5_i + 1;
+      counter_10_i <= counter_10_i + 1;
 
       if (counter_1_i == MAX_1)
         begin
